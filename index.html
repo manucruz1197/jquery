@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid - Ocultar/Mostrar Párrafo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f7f7f7, #d4af37);
+            color: #4d4d4d;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #d4af37;
+        }
+        p {
+            background-color: #ffffff;
+            padding: 15px;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #d4af37;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b89d2f;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#ocultar-btn").click(function() {
+                $("#parrafo").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Real Madrid Club de Fútbol</h1>
+    <p id="parrafo">El Real Madrid es uno de los clubes de fútbol más grandes y exitosos del mundo. Fundado en 1902, ha ganado múltiples títulos nacionales e internacionales, incluyendo 14 Champions League. Su camiseta blanca y su espíritu de lucha representan la grandeza y la historia del fútbol.</p>
+    <button id="ocultar-btn">Ocultar/Mostrar Historia</button>
+</body>
+</html>
